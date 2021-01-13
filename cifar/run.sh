@@ -11,4 +11,4 @@ python -u main.py \
 --lr_type cos \
 --warm_up \
 --weight_decay 5e-4 \
---seed 1234 \
+--seed 123 \

@@ -73,7 +73,6 @@ def main():
         for name,module in model._modules.items():
             logging.info('\t'+str(name)+': '+str(module))
         num_parameters = sum([l.nelement() for l in model.parameters()])
-        logging.info("number of parameters: %d", num_parameters)
 
 
     #* evaluate

@@ -11,4 +11,3 @@ python -u main.py \
 --lr_type cos \
 --weight_decay 5e-4 \
 --use_dali \
---resume \

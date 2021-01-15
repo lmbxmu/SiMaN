@@ -49,7 +49,7 @@ class BinarizeConv2d(nn.Conv2d):
                     del max_item, max_arg, b, Xi
                 self.B.data = torch.stack(B_tilde).unsqueeze(1)
                 del B_tilde
-            else:  
+            else:  # median
                 B = torch.zeros_like(X).cuda()
                 B[X > X.median(dim=1)[0].unsqueeze(1)] = 1 
                 self.B.data = B

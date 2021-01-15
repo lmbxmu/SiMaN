@@ -166,4 +166,10 @@ parser.add_argument(
     type=float,
     help='clip percent')
 
+parser.add_argument(
+    '--sort',
+    type=str,
+    default='topk',
+    help='sort method')
+    
 args = parser.parse_args()

@@ -172,4 +172,10 @@ parser.add_argument(
     action='store_true',
     help='use DALI to load dataset or not') 
 
+parser.add_argument(
+    '--sort',
+    type=str,
+    default='topk',
+    help='sort method')
+
 args = parser.parse_args()

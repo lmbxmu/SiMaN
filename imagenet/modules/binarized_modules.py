@@ -35,20 +35,25 @@ class BinarizeConv2d(nn.Conv2d):
         
         a0 = a - a.mean([1,2,3], keepdim=True)
         a1 = a0 / torch.sqrt(a0.var([1,2,3], keepdim=True) + 1e-5)
-        X = w2.abs().view(w.shape[0], -1, 1)
+        X = w2.abs().view(w.shape[0], -1)
         if self.training:
             #* update B
-            B_tilde = []
-            for i in range(self.B.shape[0]): 
-                b = torch.zeros_like(self.B[0].squeeze()).to(device)
-                Xi = (X[i].detach()).squeeze()
-                max_item, max_arg = torch.sort(Xi, descending=True) 
-                b[max_arg[0:len(max_item)//2]] = 1 
-                B_tilde.append(b)
-                del max_item, max_arg, b, Xi
-
-            self.B.data = torch.stack(B_tilde).unsqueeze(1)
-            del B_tilde
+            if args.sort == 'quick':
+                B_tilde = []
+                for i in range(self.B.shape[0]): 
+                    b = torch.zeros_like(self.B[0].squeeze()).to(device)
+                    Xi = (X[i].detach())
+                    max_item, max_arg = torch.sort(Xi, descending=True) 
+                    b[max_arg[0:len(max_item)//2]] = 1 
+                    B_tilde.append(b)
+                    del max_item, max_arg, b, Xi
+                self.B.data = torch.stack(B_tilde).unsqueeze(1)
+                del B_tilde
+            else:  
+                B = torch.zeros_like(X).cuda()
+                B[X > X.median(dim=1)[0].unsqueeze(1)] = 1 
+                self.B.data = B
+                del B
 
         X2 = X.view_as(w)
         bw = X2 - X2.detach() + self.B.mul(2).sub(1).view_as(w).to(device)

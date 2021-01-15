@@ -9,8 +9,7 @@ import torch.backends.cudnn as cudnn
 import models_cifar
 import numpy as np
 from torch.autograd import Variable
-from utils.options import args
-from utils.common import *
+from utils import *
 from modules import *
 from datetime import datetime 
 import dataset

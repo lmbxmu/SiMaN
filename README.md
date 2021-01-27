@@ -21,9 +21,9 @@ python -u main.py \
 ### Results on CIFAR-10. 
 |Quantized model Link                                                                                  | batch_size | batch_size_test | epochs| Top-1 |
 |:----------------------------------------------------------------------------------------------------:|:----------:|:---------------:|:-----:|:-----:|
-|[resnet18_1w1a](https://drive.google.com/drive/folders/1aZ48yGxp6KTmGUw4yhGW2U6gdRBRwRh6?usp=sharing) |    256     |       128       | 400   | 92.49 |  
-|[resnet20_1w1a](https://drive.google.com/drive/folders/1UP9fxm_60LmgR87BKU3S9DkziAT77NZg?usp=sharing) |    256     |       128       | 400   | 87.36 |
-|[vgg_small_1w1a](https://drive.google.com/drive/folders/1zHwJCX3Hn-EeZcDRz0et6NByuv5n7Tno?usp=sharing) |    256     |       128       | 400   | 92.48 |
+|[resnet18_1w1a](https://drive.google.com/drive/folders/1aZ48yGxp6KTmGUw4yhGW2U6gdRBRwRh6?usp=sharing) |    256     |       128       | 400   | 92.5 |  
+|[resnet20_1w1a](https://drive.google.com/drive/folders/1UP9fxm_60LmgR87BKU3S9DkziAT77NZg?usp=sharing) |    256     |       128       | 400   | 87.4 |
+|[vgg_small_1w1a](https://drive.google.com/drive/folders/1zHwJCX3Hn-EeZcDRz0et6NByuv5n7Tno?usp=sharing) |    256     |       128       | 400   | 92.5 |
 
 ## Training on ImageNet
 ```bash

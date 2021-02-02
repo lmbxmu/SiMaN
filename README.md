@@ -46,5 +46,5 @@ python -u main.py \
 
 |Quantized model Link                                                                                  | batch_size | batch_size_test | epochs| use_dali| Top-1 | Top-5 | 
 |:----------------------------------------------------------------------------------------------------:|:----------:|:---------------:|:-----:|:-------:|:-----:|:-----:|
-| [resnet18_1w1a](https://drive.google.com/drive/folders/1xujH6ko6GMtg32hvXvcHB8_VRdjwf7JV?usp=sharing)|    512     |       256       |  150  |   ✔   | 60.0 | 82.1 |
+| [resnet18_1w1a](https://drive.google.com/drive/folders/1xujH6ko6GMtg32hvXvcHB8_VRdjwf7JV?usp=sharing)|    512     |       256       |  150  |   ✔   | 60.1 | 82.3 |
 | [resnet34_1w1a](https://drive.google.com/drive/folders/1VadtN4wDjBMRuOakzvH6n5g4MSZAxDYV?usp=sharing)|    512     |       256       |  150  |   ✔   | 63.1 | 84.3 |

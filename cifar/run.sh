@@ -2,7 +2,7 @@ python -u main.py \
 --gpus 0 \
 --model resnet20_1w1a \
 --results_dir result \
---data_path /home/xuzihan/data \
+--data_path /data \
 --dataset cifar10 \
 --epochs 400 \
 --lr 0.1 \

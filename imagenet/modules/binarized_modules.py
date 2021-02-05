@@ -13,7 +13,7 @@ class BinarizeConv2d(nn.Conv2d):
         super(BinarizeConv2d, self).__init__(*kargs, **kwargs)
         w = self.weight
         self.alpha = nn.Parameter(w.abs().mean([1,2,3], keepdim=True).view(w.size(0), 1 ,1), requires_grad=True)
-        B = torch.sign(w).view(w.shape[0], 1, -1)
+        B = torch.sign(w).view(w.shape[0], -1)
         B.add_(1).float().div_(2)
         self.B = nn.Parameter(B, requires_grad=False)
         percent = torch.tensor(0.)

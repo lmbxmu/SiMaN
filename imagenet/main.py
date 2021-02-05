@@ -86,7 +86,7 @@ def main():
             checkpoint = torch.load(args.evaluate)
             if len(args.gpus)>1:
                 checkpoint['state_dict'] = dataset.add_module_fromdict(checkpoint['state_dict'])
-            model.load_state_dict(checkpoint['state_dict'])
+            model.load_state_dict(checkpoint['state_dict'], strict=False)
             logging.info("loaded checkpoint '%s' (epoch %s)",
                         args.evaluate, checkpoint['epoch'])
     elif args.resume:
@@ -101,7 +101,7 @@ def main():
             args.start_epoch = checkpoint['epoch'] - 1
             best_prec1 = checkpoint['best_prec1']
             best_prec5 = checkpoint['best_prec5']
-            model.load_state_dict(checkpoint['state_dict'])
+            model.load_state_dict(checkpoint['state_dict'], strict=False)
             logging.info("loaded checkpoint '%s' (epoch %s)",
                          checkpoint_file, checkpoint['epoch'])
         else:
@@ -223,7 +223,7 @@ def main():
             logging.info('lr: %s', param_group['lr'])
             break
         for module in conv_modules:
-            module.percent = torch.tensor(args.percent * (1 - epoch / args.epochs)).cuda()
+            module.percent = torch.tensor(15.0 * (1 - epoch / args.epochs)).cuda()
 
         #* training
         train_loss, train_prec1, train_prec5 = train(

@@ -6,8 +6,7 @@ python -u main.py \
 --dataset imagenet \
 --epochs 150 \
 --lr 0.1 \
--b 256 \
+-b 512 \
 -bt 256 \
 --lr_type cos \
---weight_decay 5e-4 \
 --use_dali \

@@ -4,7 +4,7 @@ import os
 args
 """
 
-parser = argparse.ArgumentParser(description='BNN')
+parser = argparse.ArgumentParser(description='SiMaN')
 
 parser.add_argument(
     '--results_dir',
@@ -159,12 +159,6 @@ parser.add_argument(
     dest='warm_up',
     action='store_true',
     help='use warm up or not')
-
-parser.add_argument(
-    '--percent',
-    default=5.0,
-    type=float,
-    help='clip percent')
 
 parser.add_argument(
     '--use_dali',

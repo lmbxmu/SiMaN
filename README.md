@@ -1,5 +1,5 @@
-# ICML21
-Pytorch implementation of ICML2021_SiMaN   
+# SiMaN: Sign-to-Magnitude Network Binarization
+Pytorch implementation of SiMaN (ICML 2021)
 
 ## Dependencies 
 * python 3.7

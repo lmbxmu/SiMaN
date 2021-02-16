@@ -9,7 +9,7 @@ Pytorch implementation of SiMaN
 
 ## Tips
 
-We suggest a reading of our RBNN in NeurIPS'20 first ([Paper](https://arxiv.org/pdf/2009.13055.pdf), [Code](https://github.com/lmbxmu/RBNN)).
+We suggest reading our RBNN in NeurIPS'20 first ([Paper](https://arxiv.org/pdf/2009.13055.pdf), [Code](https://github.com/lmbxmu/RBNN)).
 
 Any problem, please contact the first author (Email: lmbxmu@stu.xmu.edu.cn) or the third author (Email: ianhsu@stu.xmu.edu.cn).
 

@@ -1,4 +1,4 @@
-# SiMaN: Sign-to-Magnitude Network Binarization ![]( https://visitor-badge.glitch.me/badge?page_id=lmbxmu.siman)
+# SiMaN: Sign-to-Magnitude Network Binarization ![]( https://visitor-badge.glitch.me/badge?page_id=lmbxmu.SIMaN)
 Pytorch implementation of SiMaN
 
 ## Dependencies 

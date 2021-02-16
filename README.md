@@ -7,6 +7,10 @@ Pytorch implementation of SiMaN
 * torchvision 0.3.0
 * numpy 1.17.2
 
+## Tips
+
+Any problem, please contact the first author (Email: lmbxmu@stu.xmu.edu.cn) or the third author (Email: ianhsu@stu.xmu.edu.cn).
+
 ## Training on CIFAR-10
 ```bash
 python -u main.py \

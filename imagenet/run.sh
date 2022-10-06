@@ -1,0 +1,12 @@
+python -u main.py \
+--gpus 0,1,2 \
+--model resnet18_1w1a \
+--results_dir result \
+--data_path /media/ImageNet2012 \
+--dataset imagenet \
+--epochs 150 \
+--lr 0.1 \
+-b 512 \
+-bt 256 \
+--lr_type cos \
+--use_dali \

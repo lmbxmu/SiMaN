@@ -1,6 +1,6 @@
 # SiMaN: Sign-to-Magnitude Network Binarization ([Paper Link](https://arxiv.org/abs/2102.07981)) ![]( https://visitor-badge.glitch.me/badge?page_id=lmbxmu.SIMaN).
 Pytorch implementation of SiMaN (IEEE TPAMI 2022). 
-### See the Conference of RBNN ([NeurIPS 2020](https://github.com/lmbxmu/RBNN))
+### Its Conference of RBNN (NeurIPS 2020) is here ([Paper](https://arxiv.org/abs/2009.13055), [code](https://github.com/lmbxmu/RBNN))
 
 ## Dependencies 
 * python 3.7
